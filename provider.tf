@@ -9,6 +9,6 @@ terraform {
     key    = "terraform.tfstate"
     region = var.region
     encrypt = true
-    acl     = "bucket-owner-full-control"
+    acl     = "terraform-state"
   }
 }
