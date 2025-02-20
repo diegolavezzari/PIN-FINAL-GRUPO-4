@@ -26,6 +26,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Cambia la región según tus necesidades
 
+      - name: Create S3 bucket if not exists
+        run: |
+          aws s3 ls s3://terraform-state || \
+          aws s3 mb s3://terraform-state --region us-east-1
+
       # Paso 4: Inicializar Terraform (esto configurará el backend S3)
       - name: Initialize Terraform
         run: terraform init
