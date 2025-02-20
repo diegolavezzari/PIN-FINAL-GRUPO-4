@@ -25,10 +25,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Initialize Terraform
-        run: terraform init -backend-config="bucket=${{ secrets.TF_BUCKET_NAME }}" \
-                            -backend-config="key=terraform.tfstate" \
-                            -backend-config="region=us-east-1" \
-                            -backend-config="encrypt=true"
+        run: terraform init
 
       - name: Terraform Plan
         run: terraform plan
