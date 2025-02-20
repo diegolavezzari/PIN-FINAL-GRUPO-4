@@ -11,11 +11,39 @@ resource "aws_instance" "monitoring" {
   }
 }
 
+# Crear el bucket S3
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.bucket_name
-  force_destroy = true  # Permite borrar el bucket al hacer terraform destroy
+  force_destroy = true
 
   tags = {
-    Name = "Terraform State Bucket"
+    Name        = "Terraform State Bucket"
+    Environment = "Dev"
+  }
+}
+
+# Configurar ACL (permisos) del bucket
+resource "aws_s3_bucket_acl" "bucket_acl" {
+  bucket = aws_s3_bucket.terraform_state.id
+  acl    = "private"
+}
+
+# Habilitar versionado en el bucket
+resource "aws_s3_bucket_versioning" "versioning" {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+# Configurar cifrado del lado del servidor (SSE)
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
   }
 }
