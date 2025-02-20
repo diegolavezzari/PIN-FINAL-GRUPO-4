@@ -7,6 +7,6 @@ resource "aws_instance" "monitoring" {
   user_data                   = file("Contenedores.sh")  # Ejecutar el script al lanzar la instancia
 
   tags = {
-    Name = "monitoring"
+    Name = var.instance_name
   }
 }
