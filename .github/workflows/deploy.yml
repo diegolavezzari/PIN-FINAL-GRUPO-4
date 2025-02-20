@@ -1,13 +1,6 @@
-name: Terraform Plan and Apply for AWS
-
+name: Terraform Init and Apply
 on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:  # Permite ejecución manual desde GitHub Actions
 jobs:
   terraform:
     name: Terraform Workflow on AWS
