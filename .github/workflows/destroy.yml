@@ -1,0 +1,38 @@
+name: Terraform Destroy on AWS
+
+on:
+  push:
+    branches:
+      - destroy  # Se ejecutará cuando hagas push a la rama "destroy"
+
+jobs:
+  terraform:
+    name: Terraform Destroy Workflow
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Checkout del código fuente
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Paso 2: Configurar Terraform CLI
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.8.4  # Versión de Terraform a usar
+
+      # Paso 3: Configurar las credenciales de AWS (usando los secretos de GitHub)
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1  # Cambia la región según tus necesidades
+
+      # Paso 4: Inicializar Terraform
+      - name: Initialize Terraform
+        run: terraform init
+
+      # Paso 5: Ejecutar Terraform Destroy
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
