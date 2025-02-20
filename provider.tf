@@ -1,7 +1,7 @@
-provider "aws" {
-  region = var.region  # Usando la variable de región
-}
-
 terraform {
   backend "s3" {}
+}
+
+provider "aws" {
+  region = var.region
 }
