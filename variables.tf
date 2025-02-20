@@ -51,3 +51,9 @@ variable "instance_name" {
   type        = string
   default     = "monitoring"
 }
+
+variable "key_name" {
+  description = "Nombre de la instancia EC2"
+  type        = string
+  default     = "Miclaveprivada"
+}
