@@ -1,6 +1,12 @@
-name: Terraform Init and Apply
+name: Terraform Plan and Apply for AWS
+
 on:
-  workflow_dispatch:  # Permite ejecución manual desde GitHub Actions
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
   terraform:
@@ -25,11 +31,6 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Cambia la región según tus necesidades
-
-      - name: Create S3 bucket if not exists
-        run: |
-          aws s3 ls s3://terraform-state || \
-          aws s3 mb s3://terraform-state --region us-east-1
 
       # Paso 4: Inicializar Terraform (esto configurará el backend S3)
       - name: Initialize Terraform
