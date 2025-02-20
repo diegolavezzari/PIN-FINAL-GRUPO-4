@@ -1,6 +1,7 @@
 resource "aws_instance" "monitoring" {
   ami                         = var.ami_id  # ID de la AMI
   instance_type               = var.instance_type               # Tipo de instancia EC2
+  key_name                    = Miclaveprivada
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg.id]
   subnet_id                   = aws_subnet.subnet.id
