@@ -22,12 +22,6 @@ resource "aws_s3_bucket" "terraform_state" {
   }
 }
 
-# Configurar ACL (permisos) del bucket
-resource "aws_s3_bucket_acl" "bucket_acl" {
-  bucket = aws_s3_bucket.terraform_state.id
-  acl    = "private"
-}
-
 # Habilitar versionado en el bucket
 resource "aws_s3_bucket_versioning" "versioning" {
   bucket = aws_s3_bucket.terraform_state.id
