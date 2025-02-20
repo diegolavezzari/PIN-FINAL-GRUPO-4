@@ -1,5 +1,5 @@
-bucket = "terraform-state"
+bucket = var.bucket_name
 key    = "terraform.tfstate"
-region = "us-east-1"
+region = var.region
 encrypt = true
 acl     = "bucket-owner-full-control"
