@@ -3,7 +3,7 @@ terraform {
   backend "s3" {
     bucket  = var.bucket_name   # Nombre del bucket S3
     key     = "terraform.tfstate"                 # Nombre del archivo de estado dentro del bucket
-    region  = "us-east-1"                         # Región de AWS donde se encuentra el bucket S3
+    region  = var.region                         # Región de AWS donde se encuentra el bucket S3
     encrypt = true                              # Activar cifrado para el archivo de estado
     acl     = "bucket-owner-full-control"        # Permite control total al propietario del bucket
   }
