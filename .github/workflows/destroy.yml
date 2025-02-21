@@ -39,8 +39,30 @@ jobs:
           # Nombre del bucket
           BUCKET_NAME="pin-grupo-4"
 
-          # Vaciar el bucket antes de eliminarlo
-          aws s3 rm s3://$BUCKET_NAME --recursive || true
+          # Verificar si el bucket existe
+          if aws s3api head-bucket --bucket $BUCKET_NAME 2>/dev/null; then
+            echo "El bucket existe. Procediendo a eliminarlo..."
 
-          # Eliminar el bucket
-          aws s3api delete-bucket --bucket $BUCKET_NAME || true
+            # Eliminar todas las versiones de los objetos
+            echo "Eliminando versiones de objetos..."
+            aws s3api list-object-versions --bucket $BUCKET_NAME \
+              --query "Versions[].[Key,VersionId]" --output text | while read -r key version_id; do
+                echo "Eliminando objeto: $key, versión: $version_id"
+                aws s3api delete-object --bucket $BUCKET_NAME --key "$key" --version-id "$version_id"
+            done
+
+            # Eliminar marcadores de eliminación
+            echo "Eliminando marcadores de eliminación..."
+            aws s3api list-object-versions --bucket $BUCKET_NAME \
+              --query "DeleteMarkers[].[Key,VersionId]" --output text | while read -r key version_id; do
+                echo "Eliminando marcador de eliminación: $key, versión: $version_id"
+                aws s3api delete-object --bucket $BUCKET_NAME --key "$key" --version-id "$version_id"
+            done
+
+            # Eliminar el bucket vacío
+            echo "Eliminando el bucket vacío..."
+            aws s3api delete-bucket --bucket $BUCKET_NAME
+            echo "Bucket eliminado con éxito."
+          else
+            echo "El bucket no existe. No es necesario eliminarlo."
+          fi
