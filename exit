@@ -1,0 +1,209 @@
+[33mcommit 3dd9ab0c0101431b7d9f85629e6bed61b17809ce[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Fri Feb 21 00:15:04 2025 -0300
+
+    se elimina el backend.tf
+
+[33mcommit bf3fc698137313677eb5e641deb33cc889694be1[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Fri Feb 21 00:11:50 2025 -0300
+
+    creación del bucket
+
+[33mcommit b972788a1bcd8097b2d8aa5b2ba4fd6edddf3dd6[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 02:14:25 2025 -0300
+
+    fasfasf
+
+[33mcommit c4bb632b5b6fdc9edd654de589de8a841139d3e3[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 02:00:00 2025 -0300
+
+    fasdfasdf
+
+[33mcommit 87fc052227466ee14a85e79d5c66152510493594[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:57:34 2025 -0300
+
+    clave privada
+
+[33mcommit 63a1ed9cda847ab0097a6f4fb4e314e81c2b3524[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:49:19 2025 -0300
+
+    asdfasfsa
+
+[33mcommit 0d3e84a769f0d141d8688df95ed1cbe3706bdfd7[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:46:07 2025 -0300
+
+    c<zxc<xzc
+
+[33mcommit 8ce2be30fcec62f578093b0f7b0dc96b168409fd[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:12:13 2025 -0300
+
+    fasdfasf
+
+[33mcommit 13ce27c1efbe315c5448294a0eabe3d660cfcaca[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:05:03 2025 -0300
+
+    fasdfasd
+
+[33mcommit 5aece10b72ce1f5c2140556f8290253d02152767[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 01:02:52 2025 -0300
+
+    fasdfasd
+
+[33mcommit 59c4b129548064e99a2cbeb75b5039fbd55c3d7f[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:49:04 2025 -0300
+
+    safsdf
+
+[33mcommit ea0056fdd9d17d6ddab4f6b3dc627489661e7b2c[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:30:54 2025 -0300
+
+    afsdfasdf
+
+[33mcommit 4d9b9efb9581ff0478ffa923a2b670341e6940a7[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:23:19 2025 -0300
+
+    asfdasd
+
+[33mcommit db2168ea7f93167e2284299d3638d6b75ce6ca34[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:15:07 2025 -0300
+
+    se crea de 0
+
+[33mcommit 4bb55c83f02a340d0e408aae051da008e6a8d444[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:12:09 2025 -0300
+
+    eaeraf
+
+[33mcommit eb7be0f259307d9d860890f6e94a9ce2b61b0476[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:11:43 2025 -0300
+
+    s
+
+[33mcommit 87a432d21503c37c1f1c534e81ee418ffac8f97a[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:09:11 2025 -0300
+
+    s
+
+[33mcommit b13d3d2d9057d5104355522f2b9ac7491ea9f568[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Thu Feb 20 00:06:53 2025 -0300
+
+    se crea
+
+[33mcommit 867205ac5a795e7b6206a91074b25f86b4a32020[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:58:46 2025 -0300
+
+    se arreglaron varias cosas
+
+[33mcommit cf88c32db93482f68928c70005cc75abbdb8fe6e[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:49:14 2025 -0300
+
+    se corrige terraform
+
+[33mcommit 06a33bbec42857e6bf5433f7049cd05aee1be568[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:40:13 2025 -0300
+
+    se corrige terraform
+
+[33mcommit 87296a10d2a6430223cc45433881242217a7dcc5[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:22:24 2025 -0300
+
+    se corrigen backend y terraform
+
+[33mcommit e8003c947e33c7be748a972a1c359453570f5185[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:08:52 2025 -0300
+
+    se corrige provider
+
+[33mcommit 0ed36e99a072311bed22c0d3d968705234333185[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 23:05:46 2025 -0300
+
+    prueba creacion bucket
+
+[33mcommit 5f9878db84b4aaf807deacf7d44c7276a4a01ef5[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:59:41 2025 -0300
+
+    se agrega creacion bucket
+
+[33mcommit df6f68e80db340279dc7cd95a81b0cab34bcefee[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:53:35 2025 -0300
+
+    se crea bucket
+
+[33mcommit 052d0c647b80c9dfa4399af79dce049f937b81e3[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:47:55 2025 -0300
+
+    se arregla el backend
+
+[33mcommit bdbaadc73f04e5bba223c46685c6f27b55c559c9[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:23:13 2025 -0300
+
+    se agrega backend
+
+[33mcommit 88a40d4d019c065351042d479496363880a64c88[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:11:45 2025 -0300
+
+    se corrigue variable de la region
+
+[33mcommit 808914a9472dbffb4c2b9bc4ef1e5d70d484f1bf[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:10:29 2025 -0300
+
+    se borra la variable del bucket
+
+[33mcommit 493379ac4c044d899750548904209430aac67d72[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:09:07 2025 -0300
+
+    se vuelve a corregir la variable
+
+[33mcommit fbaca05a5575ae4d42ab27dabc6e135fc3566afb[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 22:06:17 2025 -0300
+
+    se corrige variable
+
+[33mcommit aa93ab5823545fffeba24d39249b9de5aaed61c3[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 21:59:37 2025 -0300
+
+    agregue dispatch en destroy
+
+[33mcommit e24b2dc6b67944295c1c8598a6bc6861ced3f775[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 21:58:34 2025 -0300
+
+    agregue dispatch
+
+[33mcommit b3451ca2ad023c3233806e7a1b2c1cf93832a913[m
+Author: Diego <diego.lavezzari@gmail.com>
+Date:   Wed Feb 19 21:53:11 2025 -0300
+
+    primer commit
