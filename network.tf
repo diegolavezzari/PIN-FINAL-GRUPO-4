@@ -69,6 +69,30 @@ resource "aws_security_group" "sg" {
     cidr_blocks = ["0.0.0.0/0"] # ⚠️ Cambiar en producción por una IP específica
   }
 
+  # Permitir tráfico Prometheus (Puerto 9090)
+  ingress {
+    from_port   = 9090
+    to_port     = 9090
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # Permitir tráfico Grafana (Puerto 3000)
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # Permitir tráfico cAdvisor (Puerto 8080)
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   # Permitir salida de la instancia (Todo el tráfico)
   egress {
     from_port   = 0
