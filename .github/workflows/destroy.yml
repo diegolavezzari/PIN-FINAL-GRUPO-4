@@ -32,3 +32,15 @@ jobs:
       # Paso 5: Ejecutar Terraform Destroy
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
+
+      # Paso 6: Eliminar el bucket S3
+      - name: Delete S3 Bucket
+        run: |
+          # Nombre del bucket
+          BUCKET_NAME="pin-grupo-4"
+
+          # Vaciar el bucket antes de eliminarlo
+          aws s3 rm s3://$BUCKET_NAME --recursive || true
+
+          # Eliminar el bucket
+          aws s3api delete-bucket --bucket $BUCKET_NAME || true
