@@ -1,31 +1,34 @@
 name: Terraform Destroy Workflow
-
 on:
   workflow_dispatch:  # Permite ejecución manual desde GitHub Actions
 
 jobs:
-  terraform-destroy:
-    name: Terraform Destroy on AWS
+  destroy:
+    name: Destroy Infrastructure with Terraform
     runs-on: ubuntu-latest
-
     steps:
+      # Paso 1: Checkout del código fuente
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Paso 2: Configurar Terraform CLI
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.8.4
 
+      # Paso 3: Configurar las credenciales de AWS
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1  
+          aws-region: us-east-1
 
+      # Paso 4: Inicializar Terraform (esto configurará el backend S3)
       - name: Initialize Terraform
         run: terraform init
 
+      # Paso 5: Ejecutar Terraform Destroy
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
